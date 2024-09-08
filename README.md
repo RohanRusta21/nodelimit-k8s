@@ -1,5 +1,8 @@
 # nodelimit-k8s
 
+```bash
+kubectl get nodes -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.allocatable.pods}{"\n"}{end}'
+```
 
 ```bash
 kubectl get nodes
